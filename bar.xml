@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:html="http://www.w3.org/1999/xhtml">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Chaînes éditoriales et rééditorialisation de contenus numériques</title>
+                <author/>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <p>translated from HTML to TEI</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Préambule</head>
+                <p>Texte présenté originellement lors du séminaire INRIA "Le document numérique à
+                    l'heure du web de données"</p>
+                <list type="unordered">
+                    <item>
+                        <p>Site du séminaire : <ref target="http://hal.inria.fr/IST2012"
+                                >http://hal.inria.fr/IST2012</ref>
+                        </p>
+                    </item>
+                    <item>
+                        <p>Article (PDF) : <ref target="http://hal.inria.fr/hal-00740268"
+                                >http://hal.inria.fr/hal-00740268</ref>
+                        </p>
+                    </item>
+                </list>
+            </div>
+            <div>
+                <head>As we may write</head>
+                <p>Stéphane Crozat</p>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <head>Introduction</head>
+                                    <p>Pendant la seconde guerre mondiale [...] le numérique est
+                                        aussi devenu le support d'une autre façon de <hi
+                                            rend="italic">produire</hi> du document [...]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <head>Raison graphique et raison computationnelle</head>
+            </div>
+            <div>
+                <head>L'invention de l'écriture a donné naissance à la rationalité moderne : la
+                    raison graphique</head>
+                <p>Goody (1979) a montré que [...]</p>
+                <object xmlns="http://www.w3.org/1999/xhtml"
+                    type="application/vnd.oasis.opendocument.spreadsheet" data="res/tab01.ods"/>
+                <table>
+                    <caption xmlns="http://www.w3.org/1999/xhtml">Ceci est un tableau à deux
+                        colonnes et deux lignes</caption>
+                    <row>
+                        <cell>
+                            <p>A</p>
+                        </cell>
+                        <cell>
+                            <p>B</p>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <p>A</p>
+                        </cell>
+                        <cell>
+                            <p>2</p>
+                        </cell>
+                    </row>
+                </table>
+            </div>
+            <div>
+                <head>Le numérique est le ferment d'une nouvelle rationalité en construction : la
+                    raison computationnelle</head>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <head>L'écrit</head>
+                                    <p>De même que l'écrit a permis le passage [...]</p>
+                                </div>
+                                <div>
+                                    <head>Les supports</head>
+                                    <p>Il y a une relation fondamentale entre les supports [...]</p>
+                                    <hi>raison graphique</hi>
+                                    <hi>raison computationnelle</hi>
+                                    <hi>support</hi>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <head>La domestication de la rééditorialisation sauvage</head>
+                <p>[...]</p>
+            </div>
+        </body>
+    </text>
+</TEI>
