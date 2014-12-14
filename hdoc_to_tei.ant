@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="convert">
+	<!-- 
+	     How-to :
+	     ant -buildfile hdoc_to_tei.ant -DInputPath="in.hdoc" -DOutputPath="out" convert
+	     
+	     with input/in.hdoc
+	     result will be into output/out directory
+	-->
+	<property file="build.properties"/>
+
+	<!-- Make sure needed directories exists -->
+	<target name="init">
+	  <mkdir dir="./{output_dir}"/>
+	  <mkdir dir="./${output_dir}/temp"/>
+	</target>
+
+</project>
+
