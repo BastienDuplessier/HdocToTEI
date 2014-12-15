@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="convert">
-	<!-- 
-	     How-to :
-	     ant -buildfile hdoc_to_tei.ant -DInputPath="in.hdoc" -DOutputPath="out" convert
-	     
-	     with input/in.hdoc
-	     result will be into output/out directory
-	-->
-	<property file="build.properties"/>
+  <!--
+       How-to :
+       ant -buildfile hdoc_to_tei.ant -DInputPath="in.hdoc" -DOutputPath="out" convert
 
-	<!-- Make sure needed directories exists -->
-	<target name="init">
-	  <mkdir dir="./{output_dir}"/>
-	  <mkdir dir="./${output_dir}/temp"/>
-	</target>
+       with in.hdoc
+       result will be into output/out directory
+  -->
+  <property file="build.properties"/>
 
+  <!-- Make sure needed directories exists -->
+  <target name="init">
+    <mkdir dir="./${output_dir}"/>
+    <mkdir dir="./${output_dir}/temp"/>
+  </target>
+
+  <!-- Fonction Dézipage -->
+  <target name="unzip">
+    <unzip dest="${output_dir}/temp/unzipped" src="${InputPath}"/>
+  </target>
+
+  <!-- Find content file, from hdoc_to_opale.ant file  -->
+  <target name="build_before_ant">
+    <!-- Finds the absolute path of container.xml -->
+    <first id="first">
+      <fileset dir="${output_dir}/temp/unzipped/META-INF" includes="**/container.xml"/>
+    </first>
+    <!-- Build ant file (apply_before.ant) to apply before.xsl on content.xml -->
+    <xslt in="${toString:first}" out="apply_before.ant" style="${xsl_dir}/extract_content.xsl"
+	  classpath="${lib}/saxon9he.jar">
+      <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+    </xslt>
+    <!-- Call ant file previously  -->
+    <ant antfile="apply_before.ant" target="start"/>
+  </target>
+
+  <!-- Base -->
+  <target name="convert" depends="init, before, html2tei, after, ressources"/>
 </project>
-
