@@ -19,7 +19,7 @@
           in="${output_dir}/temp/unzipped/{c:rootfile/@full-path}"
           out="${output_dir}/temp/past_before.xml"
           style="${xsl_dir}/before.xsl"
-	  classpath="{$lib_dir}/saxon9he.jar">
+	  classpath="${lib_dir}/saxon9he.jar">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
       </xslt>
     </target>
