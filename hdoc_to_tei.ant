@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="convert">
+<project name="converter" basedir="." default="convert">
   <!--
        How-to :
        ant -buildfile hdoc_to_tei.ant -DInputPath="in.hdoc" -DOutputPath="out" convert
@@ -11,8 +11,13 @@
 
   <!-- Make sure needed directories exists -->
   <target name="init">
-    <mkdir dir="./${output_dir}"/>
-    <mkdir dir="./${output_dir}/temp"/>
+    <mkdir dir="${output_dir}"/>
+    <mkdir dir="${output_dir}/temp"/>
+  </target>
+
+  <!-- Clean project -->
+  <target name="clear">
+    <delete dir="./${output_dir}/temp"/>
   </target>
 
   <!-- Fonction Dézipage -->
@@ -36,5 +41,5 @@
   </target>
 
   <!-- Base -->
-  <target name="convert" depends="init, before, html2tei, after, ressources"/>
+  <target name="convert" depends="init, unzip, build_before_ant, clear"/>
 </project>
