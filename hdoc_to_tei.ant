@@ -28,7 +28,7 @@
     </first>
     <!-- Build ant file (apply_before.ant) to apply before.xsl on content.xml -->
     <xslt in="${toString:first}" out="apply_before.ant" style="${xsl_dir}/extract_content.xsl"
-	  classpath="${lib}/saxon9he.jar">
+	  classpath="${lib_dir}/saxon9he.jar">
       <factory name="net.sf.saxon.TransformerFactoryImpl"/>
     </xslt>
     <!-- Call ant file previously  -->
