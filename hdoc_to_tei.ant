@@ -83,7 +83,16 @@
     </xslt>
   </target>
 
+  <!-- Apply after XSLT  -->
+  <target name="apply_after">
+    <xslt in="${output_dir}/temp/past_convert.xml" out="${output_dir}/${OutputPath}/content.xml"
+	  style="${xsl_dir}/after.xsl"
+	  classpath="${lib_dir}/saxon9he.jar">
+      <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+    </xslt>
+  </target>
+
   <!-- Base -->
-  <target name="transform" depends="build_before_ant, apply_html2tei"/>
+  <target name="transform" depends="build_before_ant, apply_html2tei, apply_after"/>
   <target name="convert" depends="init, unzip, extract_resources, transform, clear"/>
 </project>
