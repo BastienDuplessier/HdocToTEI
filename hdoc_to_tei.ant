@@ -25,6 +25,10 @@
     <unzip dest="${output_dir}/temp/unzipped" src="${InputPath}"/>
   </target>
 
+  <!-- Copy ressources into output dir -->
+  <target name="extract_resources">
+  </target>
+
   <!-- Find content file, from hdoc_to_opale.ant file  -->
   <target name="build_before_ant">
     <!-- Finds the absolute path of container.xml -->
@@ -41,5 +45,5 @@
   </target>
 
   <!-- Base -->
-  <target name="convert" depends="init, unzip, build_before_ant, clear"/>
+  <target name="convert" depends="init, unzip, extract_resources, build_before_ant, clear"/>
 </project>
