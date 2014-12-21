@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="test" basedir="." default="default">
+  <!--
+       How-to :
+       ant -buildfile hdoc_to_tei.ant -DInputPath="in.hdoc" -DOutputPath="out" convert
+
+       with in.hdoc
+       result will be into output/out directory
+  -->
+
+  <ant antfile="hdoc_to_tei.ant" target="convert">
+    <property name="InputPath" value="hdocSamples/sample01.hdoc"/>
+    <property name="OutputPath" value="out"/>
+  </ant>
+
+</project>
