@@ -12,6 +12,8 @@
   <!-- Make sure needed directories exists -->
   <target name="init">
     <mkdir dir="${output_dir}"/>
+    <delete dir="${output_dir}/${OutputPath}"/>
+    <mkdir dir="${output_dir}/${OutputPath}"/>
     <mkdir dir="${output_dir}/temp"/>
   </target>
 
