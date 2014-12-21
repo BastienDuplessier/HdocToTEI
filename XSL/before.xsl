@@ -6,23 +6,23 @@
     version="2.0">
     <xsl:output method="xml" indent="yes"/>
 
-    <!-- Identity transformation -->
-    <xsl:template match="node()|@*" priority="1">
-        <xsl:copy>
+    <!-- Add namespace to html tag -->
+    <xsl:template match="hdoc:html" priority="3">
+        <xsl:element name="html" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="node()|@*"/>
-        </xsl:copy>        
-    </xsl:template>    
+	</xsl:element>
+    </xsl:template>
 
     <!-- Namespace substitution for hdoc elements -->                        
     <xsl:template match="*" priority="2">
-        <xsl:element name="{local-name()}">
+        <xsl:element name="{local-name()}" namespace="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates select="node()|@*"/>
         </xsl:element>
     </xsl:template>
 
     <!-- Match header and replace with div class="header" -->
     <xsl:template match="hdoc:header" priority="3">
-        <xsl:element name="div">
+        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">header</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
@@ -30,7 +30,7 @@
     
     <!-- Match footer and replace with div class="header" -->
     <xsl:template match="hdoc:footer" priority="3">
-        <xsl:element name="p">
+        <xsl:element name="p" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">footer</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
