@@ -9,6 +9,11 @@
   -->
   <property file="build.properties"/>
 
+  <!--
+  ===================================================================================
+    INIT TARGETS
+  ===================================================================================
+  -->
   <!-- Make sure needed directories exists -->
   <target name="init">
     <mkdir dir="${output_dir}"/>
@@ -27,6 +32,12 @@
     <unzip dest="${output_dir}/temp/unzipped" src="${InputPath}"/>
   </target>
 
+  <!--
+  ===================================================================================
+    RESOURCE HANDLING
+  ===================================================================================
+  -->
+
   <!-- Check if there is resources to copy -->
   <target name="check_resources">
     <condition property="res.exists">
@@ -41,6 +52,12 @@
       <fileset dir="${output_dir}/temp/unzipped/res"/>
     </copy>
   </target>
+
+  <!--
+  ===================================================================================
+    CONVERT
+  ===================================================================================
+  -->
 
   <!-- Find content file, from hdoc_to_opale.ant file  -->
   <target name="build_before_ant">
