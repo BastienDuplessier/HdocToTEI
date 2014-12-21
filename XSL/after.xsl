@@ -8,7 +8,7 @@
 
     <!-- Add schema instruction -->
     <xsl:template match="/">
-        <xsl:processing-instruction name="oxygen" select="('RNGSchema=&quot;../tei_lite.rnc&quot;', 'type=&quot;xml&quot;')"/>
+        <xsl:processing-instruction name="oxygen" select="('RNGSchema=&quot;schema.rnc&quot;', 'type=&quot;xml&quot;')"/>
         <xsl:apply-templates/>
     </xsl:template>
 
