@@ -14,14 +14,14 @@
     </xsl:template>    
 
     <!-- Namespace substitution for hdoc elements -->                        
-    <xsl:template match="*" priority="1">
+    <xsl:template match="*" priority="2">
         <xsl:element name="{local-name()}">
             <xsl:apply-templates select="node()|@*"/>
         </xsl:element>
     </xsl:template>
-    
+
     <!-- Match header and replace with div class="header" -->
-    <xsl:template match="hdoc:header" priority="2">
+    <xsl:template match="hdoc:header" priority="3">
         <xsl:element name="div">
             <xsl:attribute name="class">header</xsl:attribute>
             <xsl:apply-templates/>
@@ -29,14 +29,14 @@
     </xsl:template>
     
     <!-- Match footer and replace with div class="header" -->
-    <xsl:template match="hdoc:footer" priority="2">
-        <xsl:element name="div">
+    <xsl:template match="hdoc:footer" priority="3">
+        <xsl:element name="p">
             <xsl:attribute name="class">footer</xsl:attribute>
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
 
     <!-- Suppress processing-instructions -->
-    <xsl:template match="processing-instruction()" priority="1"/>
+    <xsl:template match="processing-instruction()" priority="10"/>
     
 </xsl:stylesheet>
