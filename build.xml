@@ -9,7 +9,7 @@
   -->
   <target name="default">
     <ant antfile="hdoc_to_tei.ant" target="convert">
-      <property name="InputPath" value="hdocSamples/sample01.hdoc"/>
+      <property name="InputPath" value="hdocSamples/sample02.hdoc"/>
       <property name="OutputPath" value="out"/>
     </ant>
   </target>
