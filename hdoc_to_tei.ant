@@ -59,6 +59,13 @@
   ===================================================================================
   -->
 
+  <!-- Copy schema into dest dir -->
+  <target name="copy_schema">
+    <copy
+	file="${schema_path}"
+	tofile="${output_dir}/${OutputPath}/schema.rnc"/>
+  </target>
+
   <!-- Find content file, from hdoc_to_opale.ant file  -->
   <target name="build_before_ant">
     <!-- Finds the absolute path of container.xml -->
@@ -94,5 +101,5 @@
 
   <!-- Base -->
   <target name="transform" depends="build_before_ant, apply_html2tei, apply_after"/>
-  <target name="convert" depends="init, unzip, extract_resources, transform, clear"/>
+  <target name="convert" depends="init, unzip, extract_resources, copy_schema, transform, clear"/>
 </project>
