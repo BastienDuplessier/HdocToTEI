@@ -74,6 +74,16 @@
     <ant antfile="apply_before.ant" target="start"/>
   </target>
 
+  <!-- Apply html2tei XSLT  -->
+  <target name="apply_html2tei">
+    <xslt in="${output_dir}/temp/past_before.xml" out="${output_dir}/temp/past_convert.xml"
+	  style="${xsl_dir}/html2tei.xsl"
+	  classpath="${lib_dir}/saxon9he.jar">
+      <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+    </xslt>
+  </target>
+
   <!-- Base -->
-  <target name="convert" depends="init, unzip, extract_resources, build_before_ant, clear"/>
+  <target name="transform" depends="build_before_ant, apply_html2tei"/>
+  <target name="convert" depends="init, unzip, extract_resources, transform, clear"/>
 </project>
