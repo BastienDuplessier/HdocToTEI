@@ -27,8 +27,19 @@
     <unzip dest="${output_dir}/temp/unzipped" src="${InputPath}"/>
   </target>
 
-  <!-- Copy ressources into output dir -->
-  <target name="extract_resources">
+  <!-- Check if there is resources to copy -->
+  <target name="check_resources">
+    <condition property="res.exists">
+      <available file="${output_dir}/temp/unzipped/res" type="dir"/>
+    </condition>
+  </target>
+
+  <!-- Copy resources into output dir -->
+  <target name="extract_resources" depends="check_resources" if="res.exists">
+    <mkdir dir="${output_dir}/${OutputPath}/res"/>
+    <copy todir="${output_dir}/${OutputPath}">
+      <fileset dir="${output_dir}/temp/unzipped/res"/>
+    </copy>
   </target>
 
   <!-- Find content file, from hdoc_to_opale.ant file  -->
