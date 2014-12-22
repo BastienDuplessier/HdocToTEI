@@ -15,9 +15,14 @@
 
     <!-- Namespace substitution for hdoc elements -->                        
     <xsl:template match="*" priority="2">
-        <xsl:element name="{local-name()}" namespace="http://www.w3.org/1999/xhtml">
-            <xsl:apply-templates select="node()|@*"/>
+       <xsl:element name="{local-name()}" namespace="http://www.w3.org/1999/xhtml">
+	 <xsl:apply-templates select="@*|node()"/>
         </xsl:element>
+    </xsl:template>
+
+    <!-- Copy attributes -->
+    <xsl:template match="@*" priority="2">
+      <xsl:copy/>
     </xsl:template>
 
     <!-- Match header and replace with div class="header" -->
