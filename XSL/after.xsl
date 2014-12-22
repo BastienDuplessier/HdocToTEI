@@ -27,4 +27,12 @@
       </xsl:element>
     </xsl:template>
 
+    <!-- Fix objects -->
+    <xsl:template match="html:object">
+      <xsl:element name="ptr" namespace="http://www.tei-c.org/ns/1.0">
+	<xsl:attribute name="target"><xsl:value-of select="./@data"/></xsl:attribute>
+	<xsl:attribute name="type"><xsl:value-of select="./@type"/></xsl:attribute>
+      </xsl:element>
+    </xsl:template>
+
 </xsl:stylesheet>
