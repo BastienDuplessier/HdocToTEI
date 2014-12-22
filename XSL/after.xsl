@@ -29,9 +29,10 @@
 
     <!-- Fix objects -->
     <xsl:template match="html:object">
-      <xsl:element name="ptr" namespace="http://www.tei-c.org/ns/1.0">
-	<xsl:attribute name="target"><xsl:value-of select="./@data"/></xsl:attribute>
-	<xsl:attribute name="type"><xsl:value-of select="./@type"/></xsl:attribute>
+      <xsl:element name="figure" namespace="http://www.tei-c.org/ns/1.0">
+	<xsl:element name="graphic" namespace="http://www.tei-c.org/ns/1.0">
+	  <xsl:attribute name="url"><xsl:value-of select="./@data"/></xsl:attribute>
+	</xsl:element>
       </xsl:element>
     </xsl:template>
 
