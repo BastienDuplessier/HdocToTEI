@@ -22,7 +22,9 @@
     
     <!-- Fix captions -->
     <xsl:template match="tei:table/html:caption">
-        FOO
+      <xsl:element name="head" namespace="http://www.tei-c.org/ns/1.0">
+	<xsl:apply-templates />
+      </xsl:element>
     </xsl:template>
 
 </xsl:stylesheet>
