@@ -49,7 +49,7 @@
   <!-- Copy resources into output dir -->
   <target name="extract_resources" depends="check_resources" if="res.exists">
     <mkdir dir="${output_dir}/${OutputPath}/res"/>
-    <copy todir="${output_dir}/${OutputPath}">
+    <copy todir="${output_dir}/${OutputPath}/res">
       <fileset dir="${output_dir}/temp/unzipped/res"/>
     </copy>
   </target>
