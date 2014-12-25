@@ -25,6 +25,7 @@
   <!-- Clean project -->
   <target name="clear">
     <delete dir="./${output_dir}/temp"/>
+    <delete file="./apply_before.ant"/>
   </target>
 
   <!-- Fonction Dézipage -->
