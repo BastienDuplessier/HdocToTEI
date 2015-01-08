@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <title>Explications</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Bastien Duplessier ">
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {};
+/*1*/ scServices["scLoad"] = {loadFromRoot:function(pUrl){window.location.href="../"+pUrl;}, getPathFromRoot:function(pPath){return "../"+pPath;}, getUrlFromRoot:function(pHref){if(!this.fRootOffset) this.fRootOffset = scCoLib.hrefBase().length-19; return pHref.substring(this.fRootOffset);},getRootUrl:function(){if(!this.fRootUrl) this.fRootUrl = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().length-20); return this.fRootUrl;}};
+</script>
+  <script type="text/JavaScript" src="../lib-sm/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sma/scAssmntMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+try{if (window.parent && window.parent.scHPS){
+   var scHPS = window.parent.scHPS;
+   var scSldMgr = new scHPS.SldMgr("ide:tplPge", window);
+   (function(pSldMgr){
+     pSldMgr.addBindableBlk("des:div.imgInFlow",{ratioHeightAlone:1,ratioHeight:.85,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.imgIllus",{ratioHeightAlone:.6,ratioHeight:.5,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgInline",{captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgLabel",{ratioHeight:.5,captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.objInFlow",null,scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:div.vidInFlow",{onAction:function(pRes){try{this.fObj.SetVariable("player:jsPause", "")}catch(e){};try{this.fObj.pause()}catch(e){};}},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:span.objInline",{captionHeight:0},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:a.ssZmLnk",null,scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:a.htmlZmLnk",{setModeHtml:true},scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:div.imgGal",{autoStart:false},scHPS.AnimBlk);
+   })(scSldMgr);
+}}catch(e){}
+
+</script>
+  <meta name="generator" content="SCENARI 4.1.9 / Opale 3.5.011 - http://scenari-platform.org/opale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="revision" content="2015-01-08 00:38">
+  <link rel="start" href="module_hdoc2tei.html" title="Hdoc to TEI - Revue de projet">
+  <link type="text/css" rel="stylesheet" href="../skin/css/slideHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/slideSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplPge"><div id="tplSld"><div class="slideBk slideBkExpUc"><h1 class="slideBk_ti"><span>Explications</span></h1><div class="slideBk_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkInfo"><h2 class="bkBase_ti"><span>Cr&eacute;ation</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><ul class="txt_il "><li class="txt_ili "><p>Cr&eacute;&eacute;e en 1990</p></li><li class="txt_ili "><p>Ensemble de recommandations pour le formatage des fichiers XML</p></li><li class="txt_ili "><p>R&eacute;pond &agrave; un besoin d'avoir un balisage commun qui puisse devenir sp&eacute;cialis&eacute;</p></li><li class="txt_ili "><p>Actuellement bas&eacute;e sur XML</p></li></ul></div></div></div></div></div><div class="ssBk"><div class="bkBase bkBp bkSyntax"><h2 class="bkBase_ti"><span>Exemple de fichier</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><div class="listingBk ssCutable"><div class="code "><div class="CodeMirror-static cm-s-default" data-lang="application/xml"><div class="CodeMirror-code"><div class="CodeMirror-line"><pre><span class="cm-meta">&lt;?xml</span> <span class="cm-meta">version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></pre></div><div class="CodeMirror-line"><pre><span class="cm-tag">&lt;div</span> <span class="cm-attribute">type</span>=<span class="cm-string">&quot;chapter&quot;</span><span class="cm-tag">&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;pb</span> <span class="cm-attribute">n</span>=<span class="cm-string">&quot;214&quot;</span> <span class="cm-tag">/&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;head&gt;</span>CHAPTER XL<span class="cm-tag">&lt;/head&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;head&gt;</span>Midnight, Forecastle<span class="cm-tag">&lt;/head&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;sp&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;speaker&gt;</span>Harpooneers and sailors<span class="cm-tag">&lt;/speaker&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;stage&gt;</span>(Foresail rises and discovers the watch standing, lounging, leaning, and lying in various attitudes, all singing in chorus.)<span class="cm-tag">&lt;/stage&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>Farewell and adieu to you, Spanish ladies!<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>Farewell and adieu to you, ladies of Spain!<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>Our captain's commanded.--<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;/sp&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;sp&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;speaker&gt;</span>1st Nantucket sailor.<span class="cm-tag">&lt;/speaker&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;p&gt;</span>Oh, boys, don't be sentimental; it's bad for the digestion! Take a tonic, follow me!<span class="cm-tag">&lt;/p&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;stage&gt;</span>(Sings, and all follow)<span class="cm-tag">&lt;/stage&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>Our captain stood upon the deck,<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>A spy-glass in his hand,<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>A-viewing of those gallant whales<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>That blew at every strand.<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>Oh, your tubs in your boats, my boys,<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>And by your braces stand,<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>And we'll have one of those fine whales,<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>Hand, boys, over hand!<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>So, be cheery, my lads! may your hearts never fail!<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-tag">&lt;l&gt;</span>While the bold harpooneer is striking the whale!<span class="cm-tag">&lt;/l&gt;</span></pre></div><div class="CodeMirror-line"><pre>  <span class="cm-tag">&lt;/sp&gt;</span></pre></div><div class="CodeMirror-line"><pre></pre></div><div class="CodeMirror-line"><pre>...</pre></div></div></div></div></div></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplNav"><a id="btnRoot" class="outNav_i" target="_self" href="module_hdoc2tei.html?mode=html" title="Retourner &agrave; l'accueil"><span>Accueil</span></a><span class="hidden"> | </span><span class="sw_stack"><strong class="hidden">Position&nbsp;: </strong><span class=" sw_stack_navList"><a href="rappelTEI.html" target="_self" class=" tocPart tocUeDiv bkCnt_1"><span>La TEI&nbsp;? Qu'est ce que c'est&nbsp;?</span></a><span class="stackSep"><span> &gt; </span></span><span class=" tocSld tocExpUc bkCnt_2"><span>Explications</span></span></span></span><span class="hidden"> | </span><a id="btnPrv" href="rappelTEI.html?mode=html" target="_self" class="outNav_i" title="La TEI&nbsp;? Qu'est ce que c'est&nbsp;? (page pr&eacute;c&eacute;dente)"><span>&lt; Pr&eacute;c&eacute;dent</span></a><span class="hidden"> | </span><a id="btnNxt" href="rappelTEI_2.html?mode=html" target="_self" class="outNav_i" title="Pourquoi la TEI&nbsp;? (page suivante)"><span>Suivant &gt;</span></a></div></div>
+  <script type="text/JavaScript" src="../skin/js/slide.js"></script>
+ </body>
+</html>

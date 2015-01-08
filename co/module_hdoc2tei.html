@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <title>Hdoc to TEI - Revue de projet</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Bastien Duplessier ">
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {};
+/*1*/ scServices["scLoad"] = {loadFromRoot:function(pUrl){window.location.href="../"+pUrl;}, getPathFromRoot:function(pPath){return "../"+pPath;}, getUrlFromRoot:function(pHref){if(!this.fRootOffset) this.fRootOffset = scCoLib.hrefBase().length-23; return pHref.substring(this.fRootOffset);},getRootUrl:function(){if(!this.fRootUrl) this.fRootUrl = scCoLib.hrefBase().substring(0,scCoLib.hrefBase().length-24); return this.fRootUrl;}};
+</script>
+  <script type="text/JavaScript" src="../lib-sm/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sm/scTiLib.js"></script>
+  <script type="text/JavaScript" src="../wdgt/tocMgr/tocMgr.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scHPS/scHPS.js"></script>
+  <script type="text/JavaScript" src="../wdgt/scHPS/scHPS.locale.js"></script>
+  <script type="text/JavaScript" src="../wdgt/tocMgr/tocMgr.locale.js"></script>
+  <script type="text/JavaScript" src="../wdgt/progMgr/progMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+var scPresMgr = new scHPS.PresMgr("ide:tplSldFra","ide:tplRootNav","ide:tplTocCo/des:a.toc_lnk");
+scPresMgr.initZoomPaths("ide:tplZoomFra","ide:tplZoomCo");
+scPresMgr.initToolsPath("ide:tplTools");
+if (scHPS.fNavie8) scPresMgr.enableEffects(false);
+
+
+</script>
+  <meta name="generator" content="SCENARI 4.1.9 / Opale 3.5.011 - http://scenari-platform.org/opale">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="revision" content="2015-01-08 00:38">
+  <link type="text/css" rel="stylesheet" href="../skin/css/rootHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/rootSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplRootPge"><div id="tplSldFra" class="tplSldFraTocOff"><div id="tplHomeSlide" class="ssSlide"><div class="sldHome "><h1 class="sldHome_ti"><span>Hdoc to TEI - Revue de projet</span></h1><div class="sldHome_co "><div class="ssBkRoot"><div class="ssBk"><div class="ssBkCoParent"><div class="ssBkCo"><div class="ssCutable presData "></div><div class="ssCutable presAuth "><p>Bastien Duplessier</p></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplRootNav"><a id="btnNxt" href="module_hdoc2tei_1.html" target="_self" class="outNav_i" title="Introduction (page suivante)"><span>Suivant &gt;</span></a></div><hr class="hidden"><strong class="hidden">Plan :</strong><div class="tplTocOff" id="tplToc"><div id="tplTocCo"><div id="tplTocScroll"><ul id="toc"><li><div class="toc_sel_no toc_i toc_l pres "><a href="module_hdoc2tei.html?mode=html" target="_self" class="toc_lnk" id="module_hdoc2tei.html"><span>Hdoc to TEI - Revue de projet</span></a></div></li><li><div class="toc_sel_no toc_i toc_l tocSld tocIntro "><a href="module_hdoc2tei_1.html?mode=html" target="_self" class="toc_lnk" id="module_hdoc2tei_1.html"><span>Introduction</span></a></div></li><li><div class="toc_sel_no toc_i toc_b tocPart tocUeDiv "><a href="rappelTEI.html?mode=html" target="_self" class="toc_lnk" id="rappelTEI.html"><span>La TEI&nbsp;? Qu'est ce que c'est&nbsp;?</span></a><a href="#" onclick="tocMgr.toggleItem(this); return false;" class="toc_tgle_o" style="display:none;"><img src alt></a></div><ul class="toc_sub toc_sub_o"><li><div class="toc_sel_no toc_i toc_l tocSld tocExpUc "><a href="rappelTEI_1.html?mode=html" target="_self" class="toc_lnk" id="rappelTEI_1.html"><span>Explications</span></a></div></li><li><div class="toc_sel_no toc_i toc_l tocSld tocExpUc "><a href="rappelTEI_2.html?mode=html" target="_self" class="toc_lnk" id="rappelTEI_2.html"><span>Pourquoi la TEI&nbsp;?</span></a></div></li></ul></li><li><div class="toc_sel_no toc_i toc_b tocPart tocUeDiv "><a href="demonstration.html?mode=html" target="_self" class="toc_lnk" id="demonstration.html"><span>D&eacute;monstration / Fonctionnement</span></a><a href="#" onclick="tocMgr.toggleItem(this); return false;" class="toc_tgle_o" style="display:none;"><img src alt></a></div><ul class="toc_sub toc_sub_o"><li><div class="toc_sel_no toc_i toc_l tocSld tocExpUc "><a href="demonstration_1.html?mode=html" target="_self" class="toc_lnk" id="demonstration_1.html"><span>Utilisation du projet</span></a></div></li></ul></li><li><div class="toc_sel_no toc_i toc_b tocPart tocUeDiv "><a href="technique.html?mode=html" target="_self" class="toc_lnk" id="technique.html"><span>Explications techniques</span></a><a href="#" onclick="tocMgr.toggleItem(this); return false;" class="toc_tgle_o" style="display:none;"><img src alt></a></div><ul class="toc_sub toc_sub_o"><li><div class="toc_sel_no toc_i toc_l tocSld tocExpUc "><a href="technique_1.html?mode=html" target="_self" class="toc_lnk" id="technique_1.html"><span>Point de d&eacute;part</span></a></div></li><li><div class="toc_sel_no toc_i toc_l tocSld tocExpUc "><a href="technique_2.html?mode=html" target="_self" class="toc_lnk" id="technique_2.html"><span>Probl&egrave;mes</span></a></div></li><li><div class="toc_sel_no toc_i toc_l tocSld tocExpUc "><a href="technique_3.html?mode=html" target="_self" class="toc_lnk" id="technique_3.html"><span>Architecture du projet</span></a></div></li></ul></li><li><div class="toc_sel_no toc_i toc_l tocSld tocConclu "><a href="module_hdoc2tei_2.html?mode=html" target="_self" class="toc_lnk" id="module_hdoc2tei_2.html"><span>Conclusion</span></a></div></li></ul></div></div></div><div id="tplTools"><a id="btnModeSs" href="module_hdoc2tei.html" target="_self" title="Basculer en mode diaporama"><span>Mode diaporama</span></a></div></div>
+  <div id="tplZoomFra"><div class="tplZoomOvr"></div><div id="tplZoomCo"></div></div>
+  <script type="text/JavaScript" src="../skin/js/root.js"></script>
+  <script type="text/javascript">progMgr.addBlockCount('module_hdoc2tei.html',1);progMgr.addBlockCount('module_hdoc2tei_1.html',1);progMgr.addBlockCount('rappelTEI.html',1);progMgr.addBlockCount('rappelTEI_1.html',2);progMgr.addBlockCount('rappelTEI_2.html',2);progMgr.addBlockCount('demonstration.html',1);progMgr.addBlockCount('demonstration_1.html',6);progMgr.addBlockCount('technique.html',1);progMgr.addBlockCount('technique_1.html',5);progMgr.addBlockCount('technique_2.html',4);progMgr.addBlockCount('technique_3.html',1);progMgr.addBlockCount('module_hdoc2tei_2.html',1);</script>
+  <script type="text/javascript">tocMgr.init();progMgr.init();</script>
+ </body>
+</html>
